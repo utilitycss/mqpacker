@@ -37,10 +37,20 @@
     "postcss-import": "^14.0.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
+    "husky": "^4.0.0",
+    "lint-staged": "^10.5.4",
     "tape": "^5.2.1",
     "typescript": "4.1.5"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "prettier --no-config --write",
+      "eslint --fix"
+    ]
   }
 }
