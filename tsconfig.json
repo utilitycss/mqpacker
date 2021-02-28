@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "target": "ES2019",
+    "lib": ["ES2020"],
+    "allowJs": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "declaration": true,
+    "baseUrl": "./src",
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "paths": {
+      "*": ["node_modules/*", "src/*"]
+    }
+  },
+  "sourceRoot": "src",
+  "include": ["src/**/*"]
+}
